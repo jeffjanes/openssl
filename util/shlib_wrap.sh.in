@@ -70,6 +70,7 @@ SunOS|IRIX*)
 	DYLD_LIBRARY_PATH="${THERE}:$DYLD_LIBRARY_PATH"	# MacOS X
 	SHLIB_PATH="${THERE}:$SHLIB_PATH"		# legacy HP-UX
 	LIBPATH="${THERE}:$LIBPATH"			# AIX, OS/2
+	LD_PRELOAD="$LIBCRYPTOSO $LIBSSLSO"; export LD_PRELOAD
 	export LD_LIBRARY_PATH DYLD_LIBRARY_PATH SHLIB_PATH LIBPATH
 	# Even though $PATH is adjusted [for Windows sake], it doesn't
 	# necessarily does the trick. Trouble is that with introduction
